@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Disponibilidad | Conecta HORECA</title>
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header>
+  <div class="logo">
+    Conecta <span>HORECA</span>
+  </div>
+
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="#">Iniciar sesión</a>
+  </nav>
+</header>
+
+<main class="register-page">
+
+  <div class="form-container">
+
+    <div class="form-progress">
+      Paso 3 de 4
+    </div>
+
+    <h1>Disponibilidad y preferencias</h1>
+
+    <p class="register-subtitle">
+      Indícanos qué tipo de oportunidades estás buscando.
+    </p>
+
+    <form id="availabilityForm">
+
+      <!-- DISPONIBILIDAD -->
+
+      <div class="form-section">
+
+        <h2>Disponibilidad</h2>
+
+        <label class="check-option">
+          <input
+            type="checkbox"
+            id="disponibleAhora"
+            name="disponibleAhora"
+          >
+          <span>
+            <strong>Estoy disponible para trabajar ahora</strong>
+          </span>
+        </label>
+
+        <div class="form-group">
+          <label for="fechaDisponible">
+            ¿Desde qué fecha puedes comenzar?
+          </label>
+
+          <input
+            type="date"
+            id="fechaDisponible"
+            name="fechaDisponible"
+          >
+        </div>
+
+      </div>
+
+
+      <!-- TIPO DE TRABAJO -->
+
+      <div class="form-section">
+
+        <h2>¿Qué tipo de trabajo buscas?</h2>
+
+        <p class="section-help">
+          Puedes seleccionar varias opciones.
+        </p>
+
+        <div class="checkbox-grid">
+
+          <label class="check-option">
+            <input
+              type="checkbox"
+              name="tipoTrabajo"
+              value="Tiempo completo"
+            >
+            <span>Tiempo completo</span>
+          </label>
+
+          <label class="check-option">
+            <input
+              type="checkbox"
+              name="tipoTrabajo"
+              value="Medio tiempo"
+            >
+            <span>Medio tiempo</span>
+          </label>
+
+          <label class="check-option">
+            <input
+              type="checkbox"
+              name="tipoTrabajo"
+              value="Temporal"
+            >
+            <span>Temporal</span>
+          </label>
+
+          <label class="check-option">
+            <input
+              type="checkbox"
+              name="tipoTrabajo"
+              value="Por temporada"
+            >
+            <span>Por temporada</span>
+          </label>
+
+          <label class="check-option">
+            <input
+              type="checkbox"
+              name="tipoTrabajo"
+              value="Por evento"
+            >
+            <span>Por evento</span>
+          </label>
+
+          <label class="check-option">
+            <input
+              type="checkbox"
+              name="tipoTrabajo"
+              value="Por turno"
+            >
+            <span>Por turno</span>
+          </label>
+
+        </div>
+
+      </div>
+
+
+      <!-- PAGO -->
+
+      <div class="form-section">
+
+        <h2>Expectativa de pago</h2>
+
+        <p class="section-help">
+          Selecciona las modalidades que aceptarías e indica
+          el monto mínimo esperado.
+        </p>
+
+        <div class="payment-option">
+
+          <label class="check-option">
+            <input
+              type="checkbox"
+              id="pagoHora"
+              class="payment-checkbox"
+              data-target="montoHora"
+            >
+            <span>Por hora</span>
+          </label>
+
+          <div id="montoHora" class="payment-amount hidden">
+
+            <label for="tarifaHora">
+              Mínimo por hora
+            </label>
+
+            <div class="money-input">
+              <span>₡</span>
+              <input
+                type="number"
+                id="tarifaHora"
+                min="0"
+                step="100"
+                placeholder="3000"
+              >
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="payment-option">
+
+          <label class="check-option">
+            <input
+              type="checkbox"
+              id="pagoSemanal"
+              class="payment-checkbox"
+              data-target="montoSemanal"
+            >
+            <span>Pago semanal</span>
+          </label>
+
+          <div id="montoSemanal" class="payment-amount hidden">
+
+            <label for="tarifaSemanal">
+              Mínimo semanal
+            </label>
+
+            <div class="money-input">
+              <span>₡</span>
+              <input
+                type="number"
+                id="tarifaSemanal"
+                min="0"
+                step="1000"
+                placeholder="150000"
+              >
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="payment-option">
+
+          <label class="check-option">
+            <input
+              type="checkbox"
+              id="pagoMensual"
+              class="payment-checkbox"
+              data-target="montoMensual"
+            >
+            <span>Pago mensual</span>
+          </label>
+
+          <div id="montoMensual" class="payment-amount hidden">
+
+            <label for="tarifaMensual">
+              Mínimo mensual
+            </label>
+
+            <div class="money-input">
+              <span>₡</span>
+              <input
+                type="number"
+                id="tarifaMensual"
+                min="0"
+                step="5000"
+                placeholder="650000"
+              >
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="payment-option">
+
+          <label class="check-option">
+            <input
+              type="checkbox"
+              id="pagoEvento"
+              class="payment-checkbox"
+              data-target="montoEvento"
+            >
+            <span>Por evento</span>
+          </label>
+
+          <div id="montoEvento" class="payment-amount hidden">
+
+            <label for="tarifaEvento">
+              Mínimo por evento
+            </label>
+
+            <div class="money-input">
+              <span>₡</span>
+              <input
+                type="number"
+                id="tarifaEvento"
+                min="0"
+                step="1000"
+                placeholder="30000"
+              >
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <button type="submit" class="btn form-button">
+        Continuar
+      </button>
+
+    </form>
+
+    <a href="perfil-profesional.html" class="back-link">
+      ← Volver
+    </a>
+
+  </div>
+
+</main>
+
+<script src="app.js"></script>
+
+</body>
+</html>
