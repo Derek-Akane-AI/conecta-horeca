@@ -657,32 +657,27 @@ document.addEventListener("DOMContentLoaded", function () {
         );
       }
 
-      if (perfil.segundoIdioma) {
+     if (
+  perfil.segundoIdioma &&
+  perfil.nivelSegundoIdioma
+) {
 
-        let segundo =
-          perfil.segundoIdioma;
+  idiomas.push(
+    `${perfil.segundoIdioma} (${perfil.nivelSegundoIdioma})`
+  );
 
-        if (perfil.nivelSegundoIdioma) {
-          segundo +=
-            ` (${perfil.nivelSegundoIdioma})`;
-        }
+}
 
-        idiomas.push(segundo);
+if (
+  perfil.idiomaAdicional &&
+  perfil.nivelIdiomaAdicional
+) {
 
-      }
+  idiomas.push(
+    `${perfil.idiomaAdicional} (${perfil.nivelIdiomaAdicional})`
+  );
 
-      if (perfil.idiomaAdicional) {
-
-        let adicional =
-          perfil.idiomaAdicional;
-
-        if (perfil.nivelIdiomaAdicional) {
-          adicional +=
-            ` (${perfil.nivelIdiomaAdicional})`;
-        }
-
-        idiomas.push(adicional);
-
+}
       }
 
 
