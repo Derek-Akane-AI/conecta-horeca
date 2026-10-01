@@ -338,6 +338,73 @@ footer {
   display: none;
 }
 
+/* ========================================
+   CARGA DE CV
+======================================== */
+
+.cv-upload-section {
+  margin: 30px 0;
+  padding: 24px;
+  border: 2px dashed #d0d5dd;
+  border-radius: 12px;
+  background: #fafafa;
+}
+
+.cv-upload-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.cv-icon {
+  font-size: 28px;
+}
+
+.cv-upload-header h3 {
+  margin: 0 0 5px 0;
+  font-size: 20px;
+  color: #1f2933;
+}
+
+.cv-upload-header p {
+  margin: 0;
+  color: #667085;
+  line-height: 1.5;
+}
+
+.cv-file-input {
+  display: none;
+}
+
+.cv-upload-button {
+  display: inline-block;
+  padding: 12px 20px;
+  background: #1f2933;
+  color: white;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.cv-upload-button:hover {
+  transform: translateY(-1px);
+  opacity: 0.9;
+}
+
+.cv-file-name {
+  margin: 14px 0 5px 0;
+  font-weight: 600;
+  color: #344054;
+}
+
+.cv-help {
+  display: block;
+  color: #667085;
+  line-height: 1.4;
+}
+
 @media (max-width: 800px) {
   .options,
   .account-types {
