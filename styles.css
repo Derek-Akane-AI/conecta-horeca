@@ -742,10 +742,6 @@ footer {
     font-size: 32px;
   }
 
-  nav {
-    display: none;
-  }
-
 .form-row,
 .phone-row {
   grid-template-columns: 1fr;
