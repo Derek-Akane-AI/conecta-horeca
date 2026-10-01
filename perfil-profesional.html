@@ -1,10 +1,15 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Perfil Profesional | Conecta HORECA</title>
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Perfil profesional | Conecta HORECA</title>
 
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -12,6 +17,7 @@
 <body>
 
 <header>
+
   <div class="logo">
     Conecta <span>HORECA</span>
   </div>
@@ -20,7 +26,9 @@
     <a href="index.html">Inicio</a>
     <a href="#">Iniciar sesión</a>
   </nav>
+
 </header>
+
 
 <main class="register-page">
 
@@ -30,136 +38,379 @@
       Paso 2 de 4
     </div>
 
-    <h1>Tu experiencia profesional</h1>
+    <h1>Tu perfil profesional</h1>
 
     <p class="register-subtitle">
       Cuéntanos sobre tu experiencia en la industria HORECA.
     </p>
 
+
     <form id="professionalProfileForm">
 
-      <div class="form-group">
-        <label for="areaPrincipal">Área principal</label>
 
-        <select id="areaPrincipal" name="areaPrincipal" required>
-          <option value="">Selecciona un área</option>
-          <option value="restaurante">Restaurante</option>
-          <option value="bar">Bar y Bebidas</option>
-          <option value="cocina">Cocina</option>
-          <option value="hoteleria">Hotelería</option>
-          <option value="habitaciones">Habitaciones y limpieza</option>
-          <option value="eventos">Eventos</option>
-          <option value="administracion">Administración</option>
-          <option value="operaciones">Operaciones</option>
+      <!-- ÁREA PRINCIPAL -->
+
+      <div class="form-group">
+
+        <label for="areaPrincipal">
+          Área principal
+        </label>
+
+        <select
+          id="areaPrincipal"
+          name="areaPrincipal"
+          required
+        >
+
+          <option value="">
+            Selecciona un área
+          </option>
+
+          <option value="restaurante">
+            Restaurante
+          </option>
+
+          <option value="bar">
+            Bar y Bebidas
+          </option>
+
+          <option value="cocina">
+            Cocina
+          </option>
+
+          <option value="hoteleria">
+            Hotelería
+          </option>
+
+          <option value="habitaciones">
+            Habitaciones y Limpieza
+          </option>
+
+          <option value="eventos">
+            Eventos
+          </option>
+
+          <option value="administracion">
+            Administración
+          </option>
+
+          <option value="operaciones">
+            Operaciones
+          </option>
+
         </select>
+
       </div>
 
-      <div class="form-group">
-        <label for="puestoPrincipal">Puesto principal</label>
 
-        <select id="puestoPrincipal" name="puestoPrincipal" required disabled>
+      <!-- PUESTO PRINCIPAL -->
+
+      <div class="form-group">
+
+        <label for="puestoPrincipal">
+          Puesto principal
+        </label>
+
+        <select
+          id="puestoPrincipal"
+          name="puestoPrincipal"
+          required
+          disabled
+        >
+
           <option value="">
             Primero selecciona un área
           </option>
+
         </select>
+
       </div>
 
-      <div class="form-group">
-        <label for="experiencia">Años de experiencia</label>
 
-        <select id="experiencia" name="experiencia" required>
-          <option value="">Selecciona</option>
-          <option value="0">Menos de 1 año</option>
-          <option value="1">1 año</option>
-          <option value="2">2 años</option>
-          <option value="3">3 años</option>
-          <option value="4">4 años</option>
-          <option value="5">5 años</option>
-          <option value="6-9">6 a 9 años</option>
-          <option value="10+">10 años o más</option>
-        </select>
-      </div>
+      <!-- EXPERIENCIA -->
 
       <div class="form-group">
-        <label for="idiomaPrincipal">Idioma principal</label>
 
-        <select id="idiomaPrincipal" name="idiomaPrincipal" required>
-          <option value="">Selecciona</option>
-          <option value="espanol">Español</option>
-          <option value="ingles">Inglés</option>
-          <option value="portugues">Portugués</option>
-          <option value="frances">Francés</option>
-          <option value="otro">Otro</option>
-        </select>
-      </div>
-
-      <div class="form-group">
-        <label for="segundoIdioma">
-          Segundo idioma
-          <span class="optional-text">(opcional)</span>
+        <label for="experiencia">
+          Años de experiencia
         </label>
 
-        <select id="segundoIdioma" name="segundoIdioma">
-          <option value="">Ninguno</option>
-          <option value="espanol">Español</option>
-          <option value="ingles">Inglés</option>
-          <option value="portugues">Portugués</option>
-          <option value="frances">Francés</option>
-          <option value="otro">Otro</option>
+        <select
+          id="experiencia"
+          name="experiencia"
+          required
+        >
+
+          <option value="">
+            Selecciona
+          </option>
+
+          <option value="Menos de 1 año">
+            Menos de 1 año
+          </option>
+
+          <option value="1-2 años">
+            1-2 años
+          </option>
+
+          <option value="3-5 años">
+            3-5 años
+          </option>
+
+          <option value="6-10 años">
+            6-10 años
+          </option>
+
+          <option value="Más de 10 años">
+            Más de 10 años
+          </option>
+
         </select>
+
       </div>
 
+
+      <!-- IDIOMA PRINCIPAL -->
+
       <div class="form-group">
+
+        <label for="idiomaPrincipal">
+          Idioma principal
+        </label>
+
+        <select
+          id="idiomaPrincipal"
+          name="idiomaPrincipal"
+          required
+        >
+
+          <option value="">
+            Selecciona
+          </option>
+
+          <option value="Español">
+            Español
+          </option>
+
+          <option value="Inglés">
+            Inglés
+          </option>
+
+          <option value="Francés">
+            Francés
+          </option>
+
+          <option value="Portugués">
+            Portugués
+          </option>
+
+          <option value="Italiano">
+            Italiano
+          </option>
+
+          <option value="Alemán">
+            Alemán
+          </option>
+
+          <option value="Mandarín">
+            Mandarín
+          </option>
+
+          <option value="Coreano">
+            Coreano
+          </option>
+
+          <option value="Japonés">
+            Japonés
+          </option>
+
+          <option value="Otro">
+            Otro
+          </option>
+
+        </select>
+
+      </div>
+
+
+      <!-- SEGUNDO IDIOMA -->
+
+      <div class="form-group">
+
+        <label for="segundoIdioma">
+          Segundo idioma (opcional)
+        </label>
+
+        <select
+          id="segundoIdioma"
+          name="segundoIdioma"
+        >
+
+          <option value="">
+            Ninguno
+          </option>
+
+          <option value="Español">
+            Español
+          </option>
+
+          <option value="Inglés">
+            Inglés
+          </option>
+
+          <option value="Francés">
+            Francés
+          </option>
+
+          <option value="Portugués">
+            Portugués
+          </option>
+
+          <option value="Italiano">
+            Italiano
+          </option>
+
+          <option value="Alemán">
+            Alemán
+          </option>
+
+          <option value="Mandarín">
+            Mandarín
+          </option>
+
+          <option value="Coreano">
+            Coreano
+          </option>
+
+          <option value="Japonés">
+            Japonés
+          </option>
+
+          <option value="Otro">
+            Otro
+          </option>
+
+        </select>
+
+      </div>
+
+
+      <!-- NIVEL SEGUNDO IDIOMA -->
+
+      <div class="form-group">
+
         <label for="nivelSegundoIdioma">
           Nivel del segundo idioma
         </label>
 
-        <select id="nivelSegundoIdioma" name="nivelSegundoIdioma">
-          <option value="">Selecciona</option>
-          <option value="basico">Básico</option>
-          <option value="intermedio">Intermedio</option>
-          <option value="avanzado">Avanzado</option>
-          <option value="fluido">Fluido</option>
-          <option value="nativo">Nativo</option>
+        <select
+          id="nivelSegundoIdioma"
+          name="nivelSegundoIdioma"
+        >
+
+          <option value="">
+            Selecciona
+          </option>
+
+          <option value="Básico">
+            Básico
+          </option>
+
+          <option value="Intermedio">
+            Intermedio
+          </option>
+
+          <option value="Avanzado">
+            Avanzado
+          </option>
+
+          <option value="Fluido">
+            Fluido
+          </option>
+
+          <option value="Nativo">
+            Nativo
+          </option>
+
         </select>
+
       </div>
 
-      <div class="cv-upload">
 
-        <div class="cv-icon">📄</div>
+      <!-- CURRÍCULUM -->
 
-        <div>
-          <strong>¿Ya tienes un currículum?</strong>
+      <div class="cv-upload-section">
 
-          <p>
-            Más adelante podremos utilizarlo para completar
-            automáticamente tu experiencia y habilidades.
-          </p>
+        <div class="cv-upload-header">
+
+          <span class="cv-icon">
+            📄
+          </span>
+
+          <div>
+
+            <h3>
+              Sube tu CV
+            </h3>
+
+            <p>
+              Adjunta tu currículum para complementar
+              tu perfil profesional.
+            </p>
+
+          </div>
+
         </div>
 
-        <label for="cv" class="upload-button">
-          Seleccionar archivo
+
+        <label
+          for="cv"
+          class="cv-upload-button"
+        >
+          📎 Seleccionar CV
         </label>
+
 
         <input
           type="file"
           id="cv"
           name="cv"
           accept=".pdf,.doc,.docx"
-          hidden
+          class="cv-file-input"
         >
 
-        <div id="cvFileName" class="file-name"></div>
+
+        <p
+          id="cvFileName"
+          class="cv-file-name"
+        >
+          Ningún archivo seleccionado
+        </p>
+
+
+        <small class="cv-help">
+          PDF, DOC o DOCX. Podrás actualizar tu CV posteriormente.
+        </small>
 
       </div>
 
-      <button type="submit" class="btn form-button">
+
+      <!-- CONTINUAR -->
+
+      <button
+        type="submit"
+        class="btn form-button"
+      >
         Continuar
       </button>
 
     </form>
 
-    <a href="registro-profesional.html" class="back-link">
+
+    <a
+      href="registro-profesional.html"
+      class="back-link"
+    >
       ← Volver
     </a>
 
@@ -167,7 +418,9 @@
 
 </main>
 
+
 <script src="app.js"></script>
 
 </body>
+
 </html>
