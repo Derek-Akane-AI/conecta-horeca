@@ -962,3 +962,87 @@ if (
   }
   
 });
+
+// ========================================
+// EMPRESA - PASO 1
+// REGISTRO INICIAL
+// ========================================
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  const companyForm =
+    document.getElementById("companyForm");
+
+  if (companyForm) {
+
+    companyForm.addEventListener(
+      "submit",
+      function (event) {
+
+        event.preventDefault();
+
+        const companyData = {
+
+          nombreEmpresa:
+            document.getElementById(
+              "nombreEmpresa"
+            ).value,
+
+          tipoNegocio:
+            document.getElementById(
+              "tipoNegocio"
+            ).value,
+
+          ubicacionEmpresa:
+            document.getElementById(
+              "ubicacionEmpresa"
+            ).value,
+
+          nombreContacto:
+            document.getElementById(
+              "nombreContacto"
+            ).value,
+
+          apellidoContacto:
+            document.getElementById(
+              "apellidoContacto"
+            ).value,
+
+          cargoContacto:
+            document.getElementById(
+              "cargoContacto"
+            ).value,
+
+          emailEmpresa:
+            document.getElementById(
+              "emailEmpresa"
+            ).value,
+
+          codigoPaisEmpresa:
+            document.getElementById(
+              "codigoPaisEmpresa"
+            ).value,
+
+          telefonoEmpresa:
+            document.getElementById(
+              "telefonoEmpresa"
+            ).value
+
+        };
+
+
+        sessionStorage.setItem(
+          "conectaHorecaEmpresa",
+          JSON.stringify(companyData)
+        );
+
+
+        window.location.href =
+          "perfil-empresa.html";
+
+      }
+    );
+
+  }
+
+});
