@@ -285,4 +285,156 @@ document.addEventListener("DOMContentLoaded", function () {
 
   }
 
+  // ========================================
+  // PASO 3 - DISPONIBILIDAD Y PAGO
+  // ========================================
+
+  const paymentCheckboxes =
+    document.querySelectorAll(".payment-checkbox");
+
+  paymentCheckboxes.forEach(function (checkbox) {
+
+    checkbox.addEventListener("change", function () {
+
+      const targetId =
+        checkbox.getAttribute("data-target");
+
+      const target =
+        document.getElementById(targetId);
+
+      if (!target) return;
+
+      if (checkbox.checked) {
+
+        target.classList.remove("hidden");
+
+      } else {
+
+        target.classList.add("hidden");
+
+      }
+
+    });
+
+  });
+
+
+  const availabilityForm =
+    document.getElementById("availabilityForm");
+
+  if (availabilityForm) {
+
+    availabilityForm.addEventListener(
+      "submit",
+      function (event) {
+
+        event.preventDefault();
+
+        const tiposSeleccionados =
+          Array.from(
+            document.querySelectorAll(
+              'input[name="tipoTrabajo"]:checked'
+            )
+          ).map(function (item) {
+            return item.value;
+          });
+
+
+        if (tiposSeleccionados.length === 0) {
+
+          alert(
+            "Selecciona al menos un tipo de trabajo."
+          );
+
+          return;
+
+        }
+
+
+        const datosGuardados =
+          JSON.parse(
+            sessionStorage.getItem(
+              "conectaHorecaProfesional"
+            )
+          ) || {};
+
+
+        const datosPaso3 = {
+
+          disponibleAhora:
+            document.getElementById(
+              "disponibleAhora"
+            ).checked,
+
+          fechaDisponible:
+            document.getElementById(
+              "fechaDisponible"
+            ).value,
+
+          tiposTrabajo:
+            tiposSeleccionados,
+
+          pagoPorHora:
+            document.getElementById(
+              "pagoHora"
+            ).checked,
+
+          tarifaHora:
+            document.getElementById(
+              "tarifaHora"
+            ).value,
+
+          pagoSemanal:
+            document.getElementById(
+              "pagoSemanal"
+            ).checked,
+
+          tarifaSemanal:
+            document.getElementById(
+              "tarifaSemanal"
+            ).value,
+
+          pagoMensual:
+            document.getElementById(
+              "pagoMensual"
+            ).checked,
+
+          tarifaMensual:
+            document.getElementById(
+              "tarifaMensual"
+            ).value,
+
+          pagoEvento:
+            document.getElementById(
+              "pagoEvento"
+            ).checked,
+
+          tarifaEvento:
+            document.getElementById(
+              "tarifaEvento"
+            ).value
+
+        };
+
+
+        const perfilActualizado = {
+          ...datosGuardados,
+          ...datosPaso3
+        };
+
+
+        sessionStorage.setItem(
+          "conectaHorecaProfesional",
+          JSON.stringify(perfilActualizado)
+        );
+
+
+        window.location.href =
+          "finalizar-perfil.html";
+
+      }
+    );
+
+  }
+  
 });
