@@ -28,6 +28,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   }
 
+  });
+
 // ========================================
 // PASO 2 - PERFIL PROFESIONAL
 // ========================================
