@@ -793,22 +793,26 @@ document.addEventListener("DOMContentLoaded", function () {
           perfil.otrosPuestos.length
         ) {
 
-          perfil.otrosPuestos.forEach(
-            function (puesto) {
+         perfil.otrosPuestos
+  .filter(function (puesto) {
 
-              const tag =
-                document.createElement("span");
+    return puesto !== perfil.puestoPrincipal;
 
-              tag.className =
-                "profile-tag";
+  })
+  .forEach(function (puesto) {
 
-              tag.textContent =
-                puesto;
+    const tag =
+      document.createElement("span");
 
-              profileOtherRoles.appendChild(tag);
+    tag.className =
+      "profile-tag";
 
-            }
-          );
+    tag.textContent =
+      puesto;
+
+    profileOtherRoles.appendChild(tag);
+
+  });
 
         } else {
 
