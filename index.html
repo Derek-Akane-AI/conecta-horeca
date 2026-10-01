@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Conecta HORECA</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f6f7f8;
+      color: #1f2933;
+    }
+
+    header {
+      background: #ffffff;
+      padding: 20px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .logo span {
+      color: #c7903e;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #1f2933;
+      margin-left: 25px;
+      font-weight: 600;
+    }
+
+    .hero {
+      min-height: 520px;
+      padding: 90px 7%;
+      text-align: center;
+      background: #ffffff;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      max-width: 850px;
+      margin: 0 auto 20px;
+    }
+
+    .hero p {
+      font-size: 20px;
+      color: #667085;
+      max-width: 700px;
+      margin: 0 auto 50px;
+      line-height: 1.6;
+    }
+
+    .options {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .card {
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      border-radius: 18px;
+      padding: 35px 25px;
+      transition: 0.25s;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+    }
+
+    .icon {
+      font-size: 42px;
+      margin-bottom: 20px;
+    }
+
+    .card h2 {
+      margin-bottom: 15px;
+    }
+
+    .card p {
+      color: #667085;
+      line-height: 1.5;
+      margin-bottom: 25px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #1f2933;
+      color: white;
+      text-decoration: none;
+      padding: 13px 22px;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+
+    .btn:hover {
+      background: #c7903e;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: #667085;
+    }
+
+    @media (max-width: 800px) {
+      .options {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        font-size: 36px;
+      }
+
+      nav {
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">Conecta <span>HORECA</span></div>
+
+  <nav>
+    <a href="#">Inicio</a>
+    <a href="#">Iniciar sesión</a>
+    <a href="#">Crear cuenta</a>
+  </nav>
+</header>
+
+<section class="hero">
+
+  <h1>Todo el talento de la hospitalidad en un solo lugar.</h1>
+
+  <p>
+    Conectamos profesionales, empresas y proveedores de la industria
+    HORECA de forma rápida, directa y eficiente.
+  </p>
+
+  <div class="options">
+
+    <div class="card">
+      <div class="icon">👤</div>
+
+      <h2>Busco trabajo</h2>
+
+      <p>
+        Encuentra oportunidades en hoteles, restaurantes,
+        bares y eventos.
+      </p>
+
+      <a href="#" class="btn">Encontrar trabajo</a>
+    </div>
+
+    <div class="card">
+      <div class="icon">🏢</div>
+
+      <h2>Busco personal</h2>
+
+      <p>
+        Encuentra profesionales para puestos permanentes,
+        temporales o por evento.
+      </p>
+
+      <a href="#" class="btn">Encontrar talento</a>
+    </div>
+
+    <div class="card">
+      <div class="icon">🤝</div>
+
+      <h2>Ofrezco servicios</h2>
+
+      <p>
+        Conecta tus servicios con hoteles, restaurantes,
+        bares y empresas de eventos.
+      </p>
+
+      <a href="#" class="btn">Ofrecer servicios</a>
+    </div>
+
+  </div>
+
+</section>
+
+<footer>
+  © 2026 Conecta HORECA · Costa Rica
+</footer>
+
+</body>
+</html>
