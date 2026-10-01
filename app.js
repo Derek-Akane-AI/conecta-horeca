@@ -50,11 +50,13 @@ document.addEventListener("DOMContentLoaded", function () {
     ],
 
     bar: [
-      "Bartender",
-      "Mixólogo/a",
-      "Barback",
-      "Jefe/a de bar",
-      "Gerente de bar"
+     "Bartender",
+     "Mixólogo/a",
+     "Barback",
+     "Sommelier",
+     "Especialista en vinos",
+     "Jefe/a de bar",
+     "Gerente de bar"
     ],
 
     cocina: [
