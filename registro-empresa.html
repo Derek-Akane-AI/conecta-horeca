@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Registro de empresa | Conecta HORECA</title>
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header>
+
+  <div class="logo">
+    Conecta <span>HORECA</span>
+  </div>
+
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="#">Iniciar sesión</a>
+  </nav>
+
+</header>
+
+
+<main class="register-page">
+
+  <div class="form-container">
+
+    <div class="form-progress">
+      Paso 1 de 4
+    </div>
+
+    <h1>Registra tu empresa</h1>
+
+    <p class="register-subtitle">
+      Encuentra profesionales y servicios para tu negocio HORECA.
+    </p>
+
+
+    <form id="companyForm">
+
+
+      <!-- NOMBRE DE EMPRESA -->
+
+      <div class="form-group">
+
+        <label for="nombreEmpresa">
+          Nombre de la empresa
+        </label>
+
+        <input
+          type="text"
+          id="nombreEmpresa"
+          name="nombreEmpresa"
+          placeholder="Ej. Hotel Costa Verde"
+          required
+        >
+
+      </div>
+
+
+      <!-- TIPO DE NEGOCIO -->
+
+      <div class="form-group">
+
+        <label for="tipoNegocio">
+          Tipo de negocio
+        </label>
+
+        <select
+          id="tipoNegocio"
+          name="tipoNegocio"
+          required
+        >
+
+          <option value="">
+            Selecciona una opción
+          </option>
+
+          <option value="Restaurante">
+            Restaurante
+          </option>
+
+          <option value="Bar">
+            Bar
+          </option>
+
+          <option value="Hotel">
+            Hotel
+          </option>
+
+          <option value="Cafetería">
+            Cafetería
+          </option>
+
+          <option value="Catering">
+            Catering
+          </option>
+
+          <option value="Empresa de eventos">
+            Empresa de eventos
+          </option>
+
+          <option value="Venue / Salón de eventos">
+            Venue / Salón de eventos
+          </option>
+
+          <option value="Club">
+            Club
+          </option>
+
+          <option value="Resort">
+            Resort
+          </option>
+
+          <option value="Empresa de hospitalidad">
+            Empresa de hospitalidad
+          </option>
+
+          <option value="Otro">
+            Otro
+          </option>
+
+        </select>
+
+      </div>
+
+
+      <!-- UBICACIÓN -->
+
+      <div class="form-group">
+
+        <label for="ubicacionEmpresa">
+          Provincia
+        </label>
+
+        <select
+          id="ubicacionEmpresa"
+          name="ubicacionEmpresa"
+          required
+        >
+
+          <option value="">
+            Selecciona una provincia
+          </option>
+
+          <option value="San José">
+            San José
+          </option>
+
+          <option value="Alajuela">
+            Alajuela
+          </option>
+
+          <option value="Cartago">
+            Cartago
+          </option>
+
+          <option value="Heredia">
+            Heredia
+          </option>
+
+          <option value="Guanacaste">
+            Guanacaste
+          </option>
+
+          <option value="Puntarenas">
+            Puntarenas
+          </option>
+
+          <option value="Limón">
+            Limón
+          </option>
+
+        </select>
+
+      </div>
+
+
+      <!-- PERSONA DE CONTACTO -->
+
+      <div class="form-row">
+
+        <div class="form-group">
+
+          <label for="nombreContacto">
+            Nombre de contacto
+          </label>
+
+          <input
+            type="text"
+            id="nombreContacto"
+            name="nombreContacto"
+            placeholder="Nombre"
+            required
+          >
+
+        </div>
+
+
+        <div class="form-group">
+
+          <label for="apellidoContacto">
+            Apellido
+          </label>
+
+          <input
+            type="text"
+            id="apellidoContacto"
+            name="apellidoContacto"
+            placeholder="Apellido"
+            required
+          >
+
+        </div>
+
+      </div>
+
+
+      <!-- CARGO -->
+
+      <div class="form-group">
+
+        <label for="cargoContacto">
+          Cargo dentro de la empresa
+        </label>
+
+        <input
+          type="text"
+          id="cargoContacto"
+          name="cargoContacto"
+          placeholder="Ej. Gerente, Recursos Humanos, Propietario"
+          required
+        >
+
+      </div>
+
+
+      <!-- CORREO -->
+
+      <div class="form-group">
+
+        <label for="emailEmpresa">
+          Correo electrónico
+        </label>
+
+        <input
+          type="email"
+          id="emailEmpresa"
+          name="emailEmpresa"
+          placeholder="empresa@correo.com"
+          required
+        >
+
+      </div>
+
+
+      <!-- TELÉFONO -->
+
+      <div class="form-group">
+
+        <label for="telefonoEmpresa">
+          Teléfono
+        </label>
+
+        <div class="phone-row">
+
+          <select
+            id="codigoPaisEmpresa"
+            name="codigoPaisEmpresa"
+          >
+
+            <option value="+506">
+              🇨🇷 +506
+            </option>
+
+          </select>
+
+          <input
+            type="tel"
+            id="telefonoEmpresa"
+            name="telefonoEmpresa"
+            placeholder="8888-8888"
+            required
+          >
+
+        </div>
+
+      </div>
+
+
+      <!-- CONTRASEÑA -->
+
+      <div class="form-group">
+
+        <label for="passwordEmpresa">
+          Crear contraseña
+        </label>
+
+        <input
+          type="password"
+          id="passwordEmpresa"
+          name="passwordEmpresa"
+          minlength="8"
+          placeholder="Mínimo 8 caracteres"
+          required
+        >
+
+      </div>
+
+
+      <button
+        type="submit"
+        class="btn form-button"
+      >
+        Continuar
+      </button>
+
+    </form>
+
+
+    <a
+      href="registro.html"
+      class="back-link"
+    >
+      ← Volver
+    </a>
+
+  </div>
+
+</main>
+
+
+<script src="app.js"></script>
+
+</body>
+
+</html>
