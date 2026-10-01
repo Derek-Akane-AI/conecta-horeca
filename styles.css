@@ -255,6 +255,89 @@ footer {
   text-align: center;
 }
 
+/* DISPONIBILIDAD Y PAGO */
+
+.form-section {
+  margin-bottom: 35px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.form-section h2 {
+  font-size: 21px;
+  margin-bottom: 10px;
+}
+
+.section-help {
+  color: #667085;
+  margin-bottom: 18px;
+  line-height: 1.5;
+}
+
+.checkbox-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.check-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px;
+  border: 1px solid #e5e7eb;
+  border-radius: 9px;
+  cursor: pointer;
+  margin-bottom: 12px;
+  background: #ffffff;
+}
+
+.check-option:hover {
+  border-color: #c7903e;
+}
+
+.check-option input {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.payment-option {
+  margin-bottom: 15px;
+}
+
+.payment-amount {
+  padding: 5px 15px 15px 42px;
+}
+
+.money-input {
+  display: flex;
+  align-items: center;
+  border: 1px solid #d0d5dd;
+  border-radius: 8px;
+  background: #ffffff;
+  overflow: hidden;
+  margin-top: 8px;
+}
+
+.money-input span {
+  padding: 14px;
+  background: #f6f7f8;
+  font-weight: bold;
+}
+
+.money-input input {
+  width: 100%;
+  border: none;
+  padding: 14px;
+  font-size: 16px;
+  outline: none;
+}
+
+.hidden {
+  display: none;
+}
+
 @media (max-width: 800px) {
   .options,
   .account-types {
