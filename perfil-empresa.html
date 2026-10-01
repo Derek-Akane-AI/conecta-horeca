@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Perfil de empresa | Conecta HORECA</title>
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header>
+
+  <div class="logo">
+    Conecta <span>HORECA</span>
+  </div>
+
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="#">Iniciar sesión</a>
+  </nav>
+
+</header>
+
+
+<main class="register-page">
+
+  <div class="form-container">
+
+    <div class="form-progress">
+      Paso 2 de 4
+    </div>
+
+    <h1>Perfil de tu empresa</h1>
+
+    <p class="register-subtitle">
+      Cuéntanos más sobre tu negocio y presencia en la industria HORECA.
+    </p>
+
+
+    <form id="companyProfileForm">
+
+
+      <!-- DESCRIPCIÓN -->
+
+      <div class="form-group">
+
+        <label for="descripcionEmpresa">
+          Acerca de la empresa
+        </label>
+
+        <textarea
+          id="descripcionEmpresa"
+          name="descripcionEmpresa"
+          rows="5"
+          maxlength="700"
+          placeholder="Describe brevemente tu empresa, concepto, servicios y ambiente de trabajo..."
+          required
+        ></textarea>
+
+        <small>
+          Máximo 700 caracteres.
+        </small>
+
+      </div>
+
+
+      <!-- LOGO -->
+
+      <div class="cv-upload-section">
+
+        <div class="cv-upload-header">
+
+          <span class="cv-icon">
+            🏢
+          </span>
+
+          <div>
+
+            <h3>
+              Logo de la empresa
+            </h3>
+
+            <p>
+              Agrega el logo que aparecerá en tu perfil,
+              empleos y contrataciones.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <label
+          for="logoEmpresa"
+          class="cv-upload-button"
+        >
+          📎 Seleccionar logo
+        </label>
+
+
+        <input
+          type="file"
+          id="logoEmpresa"
+          name="logoEmpresa"
+          accept=".jpg,.jpeg,.png,.webp"
+          class="cv-file-input"
+        >
+
+
+        <p
+          id="logoFileName"
+          class="cv-file-name"
+        >
+          Ningún archivo seleccionado
+        </p>
+
+
+        <small class="cv-help">
+          JPG, PNG o WEBP. Podrás actualizarlo posteriormente.
+        </small>
+
+      </div>
+
+
+      <!-- TAMAÑO -->
+
+      <div class="form-group">
+
+        <label for="tamanoEmpresa">
+          Tamaño aproximado del equipo
+        </label>
+
+        <select
+          id="tamanoEmpresa"
+          name="tamanoEmpresa"
+          required
+        >
+
+          <option value="">
+            Selecciona una opción
+          </option>
+
+          <option value="1-5 personas">
+            1-5 personas
+          </option>
+
+          <option value="6-15 personas">
+            6-15 personas
+          </option>
+
+          <option value="16-50 personas">
+            16-50 personas
+          </option>
+
+          <option value="51-100 personas">
+            51-100 personas
+          </option>
+
+          <option value="101-250 personas">
+            101-250 personas
+          </option>
+
+          <option value="Más de 250 personas">
+            Más de 250 personas
+          </option>
+
+        </select>
+
+      </div>
+
+
+      <!-- SUCURSALES -->
+
+      <div class="form-group">
+
+        <label for="cantidadUbicaciones">
+          ¿Cuántas ubicaciones o sucursales tiene?
+        </label>
+
+        <select
+          id="cantidadUbicaciones"
+          name="cantidadUbicaciones"
+          required
+        >
+
+          <option value="">
+            Selecciona
+          </option>
+
+          <option value="1">
+            1
+          </option>
+
+          <option value="2-3">
+            2-3
+          </option>
+
+          <option value="4-10">
+            4-10
+          </option>
+
+          <option value="Más de 10">
+            Más de 10
+          </option>
+
+        </select>
+
+      </div>
+
+
+      <!-- SITIO WEB -->
+
+      <div class="form-group">
+
+        <label for="sitioWeb">
+          Sitio web (opcional)
+        </label>
+
+        <input
+          type="url"
+          id="sitioWeb"
+          name="sitioWeb"
+          placeholder="https://..."
+        >
+
+      </div>
+
+
+      <!-- REDES -->
+
+      <div class="form-group">
+
+        <label for="redSocialEmpresa">
+          Instagram o red social (opcional)
+        </label>
+
+        <input
+          type="text"
+          id="redSocialEmpresa"
+          name="redSocialEmpresa"
+          placeholder="@tuempresa"
+        >
+
+      </div>
+
+
+      <button
+        type="submit"
+        class="btn form-button"
+      >
+        Continuar
+      </button>
+
+    </form>
+
+
+    <a
+      href="registro-empresa.html"
+      class="back-link"
+    >
+      ← Volver
+    </a>
+
+  </div>
+
+</main>
+
+
+<script src="app.js"></script>
+
+</body>
+
+</html>
