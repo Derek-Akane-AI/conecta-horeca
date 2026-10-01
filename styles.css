@@ -176,6 +176,85 @@ footer {
   color: #c7903e;
 }
 
+/* FORMULARIOS */
+
+.form-container {
+  max-width: 650px;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 45px;
+  border-radius: 18px;
+  border: 1px solid #e5e7eb;
+  text-align: left;
+}
+
+.form-container h1 {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.form-container .register-subtitle {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.form-progress {
+  text-align: center;
+  color: #c7903e;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.form-group {
+  margin-bottom: 22px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #d0d5dd;
+  border-radius: 8px;
+  font-size: 16px;
+  background: #ffffff;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #c7903e;
+}
+
+.phone-row {
+  display: grid;
+  grid-template-columns: 130px 1fr;
+  gap: 10px;
+}
+
+.form-button {
+  width: 100%;
+  margin-top: 8px;
+  font-size: 16px;
+}
+
+.form-container .back-link {
+  display: block;
+  text-align: center;
+}
+
 @media (max-width: 800px) {
   .options,
   .account-types {
@@ -193,4 +272,14 @@ footer {
   nav {
     display: none;
   }
+
+.form-row,
+.phone-row {
+  grid-template-columns: 1fr;
+}
+
+.form-container {
+  padding: 30px 20px;
+}
+  
 }
