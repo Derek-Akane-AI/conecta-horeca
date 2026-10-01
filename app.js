@@ -436,5 +436,530 @@ document.addEventListener("DOMContentLoaded", function () {
     );
 
   }
+
+  // ========================================
+  // PASO 4 - COMPLETAR PERFIL
+  // ========================================
+
+  const finalProfileForm =
+    document.getElementById("finalProfileForm");
+
+  if (finalProfileForm) {
+
+    finalProfileForm.addEventListener(
+      "submit",
+      function (event) {
+
+        event.preventDefault();
+
+
+        // OTROS PUESTOS
+
+        const otrosPuestos =
+          Array.from(
+            document.querySelectorAll(
+              'input[name="otrosPuestos"]:checked'
+            )
+          ).map(function (item) {
+            return item.value;
+          });
+
+
+        // HABILIDADES
+
+        const habilidades =
+          Array.from(
+            document.querySelectorAll(
+              'input[name="habilidades"]:checked'
+            )
+          ).map(function (item) {
+            return item.value;
+          });
+
+
+        // DATOS GUARDADOS DE PASOS ANTERIORES
+
+        const datosGuardados =
+          JSON.parse(
+            sessionStorage.getItem(
+              "conectaHorecaProfesional"
+            )
+          ) || {};
+
+
+        // DATOS DEL PASO 4
+
+        const datosPaso4 = {
+
+          otrosPuestos: otrosPuestos,
+
+          habilidades: habilidades,
+
+          idiomaAdicional:
+            document.getElementById(
+              "idiomaAdicional"
+            ).value,
+
+          nivelIdiomaAdicional:
+            document.getElementById(
+              "nivelIdiomaAdicional"
+            ).value,
+
+          certificaciones:
+            document.getElementById(
+              "certificaciones"
+            ).value,
+
+          sobreMi:
+            document.getElementById(
+              "sobreMi"
+            ).value
+
+        };
+
+
+        // UNIR TODO EL PERFIL
+
+        const perfilCompleto = {
+          ...datosGuardados,
+          ...datosPaso4
+        };
+
+
+        sessionStorage.setItem(
+          "conectaHorecaProfesional",
+          JSON.stringify(perfilCompleto)
+        );
+
+
+        // IR AL PERFIL
+
+        window.location.href =
+          "perfil.html";
+
+      }
+    );
+
+  }
+
+
+
+  // ========================================
+  // MOSTRAR PERFIL PROFESIONAL
+  // ========================================
+
+  const profileName =
+    document.getElementById("profileName");
+
+  if (profileName) {
+
+    const perfil =
+      JSON.parse(
+        sessionStorage.getItem(
+          "conectaHorecaProfesional"
+        )
+      );
+
+
+    if (perfil) {
+
+
+      // NOMBRE
+
+      const nombreCompleto =
+        `${perfil.nombre || ""} ${perfil.apellido || ""}`.trim();
+
+      profileName.textContent =
+        nombreCompleto || "Profesional HORECA";
+
+
+      // INICIALES
+
+      const profileInitials =
+        document.getElementById(
+          "profileInitials"
+        );
+
+      if (profileInitials && nombreCompleto) {
+
+        const partesNombre =
+          nombreCompleto.split(" ");
+
+        const iniciales =
+          partesNombre
+            .slice(0, 2)
+            .map(function (parte) {
+              return parte.charAt(0).toUpperCase();
+            })
+            .join("");
+
+        profileInitials.textContent =
+          iniciales;
+
+      }
+
+
+      // PUESTO
+
+      const profileRole =
+        document.getElementById(
+          "profileRole"
+        );
+
+      if (profileRole) {
+
+        profileRole.textContent =
+          perfil.puestoPrincipal ||
+          "Profesional HORECA";
+
+      }
+
+
+      // UBICACIÓN
+
+      const profileLocation =
+        document.getElementById(
+          "profileLocation"
+        );
+
+      if (profileLocation) {
+
+        profileLocation.textContent =
+          perfil.ubicacion ||
+          "Costa Rica";
+
+      }
+
+
+      // EXPERIENCIA
+
+      const profileExperience =
+        document.getElementById(
+          "profileExperience"
+        );
+
+      if (profileExperience) {
+
+        profileExperience.textContent =
+          perfil.experiencia ||
+          "Experiencia no especificada";
+
+      }
+
+
+      // IDIOMAS
+
+      const idiomas = [];
+
+      if (perfil.idiomaPrincipal) {
+        idiomas.push(
+          perfil.idiomaPrincipal
+        );
+      }
+
+      if (perfil.segundoIdioma) {
+
+        let segundo =
+          perfil.segundoIdioma;
+
+        if (perfil.nivelSegundoIdioma) {
+          segundo +=
+            ` (${perfil.nivelSegundoIdioma})`;
+        }
+
+        idiomas.push(segundo);
+
+      }
+
+      if (perfil.idiomaAdicional) {
+
+        let adicional =
+          perfil.idiomaAdicional;
+
+        if (perfil.nivelIdiomaAdicional) {
+          adicional +=
+            ` (${perfil.nivelIdiomaAdicional})`;
+        }
+
+        idiomas.push(adicional);
+
+      }
+
+
+      const profileLanguages =
+        document.getElementById(
+          "profileLanguages"
+        );
+
+      if (profileLanguages) {
+
+        profileLanguages.textContent =
+          idiomas.length
+            ? idiomas.join(" · ")
+            : "No especificado";
+
+      }
+
+
+      // DISPONIBILIDAD
+
+      const availabilityBadge =
+        document.getElementById(
+          "availabilityBadge"
+        );
+
+      if (availabilityBadge) {
+
+        availabilityBadge.textContent =
+          perfil.disponibleAhora
+            ? "Disponible ahora"
+            : "Disponibilidad futura";
+
+      }
+
+
+      // SOBRE MÍ
+
+      const profileAbout =
+        document.getElementById(
+          "profileAbout"
+        );
+
+      if (profileAbout) {
+
+        profileAbout.textContent =
+          perfil.sobreMi ||
+          "Este profesional todavía no ha agregado una presentación.";
+
+      }
+
+
+      // HABILIDADES
+
+      const profileSkills =
+        document.getElementById(
+          "profileSkills"
+        );
+
+      if (profileSkills) {
+
+        profileSkills.innerHTML = "";
+
+        if (
+          perfil.habilidades &&
+          perfil.habilidades.length
+        ) {
+
+          perfil.habilidades.forEach(
+            function (habilidad) {
+
+              const tag =
+                document.createElement("span");
+
+              tag.className =
+                "profile-tag";
+
+              tag.textContent =
+                habilidad;
+
+              profileSkills.appendChild(tag);
+
+            }
+          );
+
+        } else {
+
+          profileSkills.textContent =
+            "No se han agregado habilidades.";
+
+        }
+
+      }
+
+
+      // OTROS PUESTOS
+
+      const profileOtherRoles =
+        document.getElementById(
+          "profileOtherRoles"
+        );
+
+      if (profileOtherRoles) {
+
+        profileOtherRoles.innerHTML = "";
+
+        if (
+          perfil.otrosPuestos &&
+          perfil.otrosPuestos.length
+        ) {
+
+          perfil.otrosPuestos.forEach(
+            function (puesto) {
+
+              const tag =
+                document.createElement("span");
+
+              tag.className =
+                "profile-tag";
+
+              tag.textContent =
+                puesto;
+
+              profileOtherRoles.appendChild(tag);
+
+            }
+          );
+
+        } else {
+
+          profileOtherRoles.textContent =
+            "No se han agregado otros puestos.";
+
+        }
+
+      }
+
+
+      // TIPOS DE TRABAJO
+
+      const profileWorkTypes =
+        document.getElementById(
+          "profileWorkTypes"
+        );
+
+      if (profileWorkTypes) {
+
+        profileWorkTypes.textContent =
+          perfil.tiposTrabajo &&
+          perfil.tiposTrabajo.length
+            ? perfil.tiposTrabajo.join(", ")
+            : "No especificado";
+
+      }
+
+
+      // FECHA DISPONIBLE
+
+      const profileStartDate =
+        document.getElementById(
+          "profileStartDate"
+        );
+
+      if (profileStartDate) {
+
+        profileStartDate.textContent =
+          perfil.disponibleAhora
+            ? "Inmediata"
+            : (
+                perfil.fechaDisponible ||
+                "No especificada"
+              );
+
+      }
+
+
+      // CERTIFICACIONES
+
+      const profileCertifications =
+        document.getElementById(
+          "profileCertifications"
+        );
+
+      if (profileCertifications) {
+
+        profileCertifications.textContent =
+          perfil.certificaciones ||
+          "No se han agregado certificaciones.";
+
+      }
+
+
+      // EXPECTATIVAS DE PAGO
+
+      const profilePayment =
+        document.getElementById(
+          "profilePayment"
+        );
+
+      if (profilePayment) {
+
+        profilePayment.innerHTML = "";
+
+
+        function agregarPago(
+          titulo,
+          monto
+        ) {
+
+          if (!monto) return;
+
+          const item =
+            document.createElement("div");
+
+          item.className =
+            "payment-profile-item";
+
+          const numero =
+            Number(monto);
+
+          const montoFormateado =
+            numero.toLocaleString(
+              "es-CR"
+            );
+
+          item.innerHTML =
+            `<span>${titulo}</span>
+             <strong>₡${montoFormateado}</strong>`;
+
+          profilePayment.appendChild(
+            item
+          );
+
+        }
+
+
+        if (perfil.pagoPorHora) {
+          agregarPago(
+            "Por hora",
+            perfil.tarifaHora
+          );
+        }
+
+        if (perfil.pagoSemanal) {
+          agregarPago(
+            "Semanal",
+            perfil.tarifaSemanal
+          );
+        }
+
+        if (perfil.pagoMensual) {
+          agregarPago(
+            "Mensual",
+            perfil.tarifaMensual
+          );
+        }
+
+        if (perfil.pagoEvento) {
+          agregarPago(
+            "Por evento",
+            perfil.tarifaEvento
+          );
+        }
+
+
+        if (
+          profilePayment.children.length === 0
+        ) {
+
+          profilePayment.textContent =
+            "No se especificaron expectativas de pago.";
+
+        }
+
+      }
+
+    }
+
+  }
   
 });
