@@ -678,7 +678,6 @@ if (
   );
 
 }
-      }
 
 
       const profileLanguages =
