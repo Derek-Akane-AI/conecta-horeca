@@ -1045,3 +1045,38 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
 });
+
+// ========================================
+// MENÚ MÓVIL
+// ========================================
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  const mobileMenuButton =
+    document.getElementById("mobileMenuButton");
+
+  const mainNav =
+    document.getElementById("mainNav");
+
+  if (mobileMenuButton && mainNav) {
+
+    mobileMenuButton.addEventListener("click", function () {
+
+      mainNav.classList.toggle("mobile-nav-open");
+
+      const menuAbierto =
+        mainNav.classList.contains("mobile-nav-open");
+
+      mobileMenuButton.setAttribute(
+        "aria-expanded",
+        menuAbierto
+      );
+
+      mobileMenuButton.innerHTML =
+        menuAbierto ? "✕" : "☰";
+
+    });
+
+  }
+
+});
